@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoSphere Pro | AI-გაძლიერებული გეოდეზიური პლატფორმა</title>
+    <meta name="description" content="პროგრესული გეოდეზიური გადაწყვეტილებები AI, 3D სკანირების და კლაუდ ტექნოლოგიების ერთობლიობა. მიწის მონიტორინგი, სამშენებლო გეოდეზია და სივრცითი ანალიტიკა რეალურ დროში.">
+    <meta name="keywords" content="გეოდეზია, AI, 3D სკანირება, დრონული გაზომვები, GIS, გეოსივრცითი ანალიზი, საქართველო, თბილისი, კადასტრი, მიწის გაზომვა">
+    <meta name="author" content="GeoSphere Technologies">
+    <meta property="og:title" content="GeoSphere Pro | AI-გაძლიერებული გეოდეზიური პლატფორმა">
+    <meta property="og:description" content="რევოლუციური გეოდეზიური ტექნოლოგიები 2025 წლისთვის">
+    <meta property="og:image" content="https://geosphere.ge/og-image.jpg">
+    <meta property="og:url" content="https://geosphere.ge">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Space+Grotesk:wght@300..700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <span class="logo-text">GeoSphere</span>
+            </a>
+
+            <nav class="nav">
+                <a href="#home" class="nav-link active">მთავარი</a>
+                <a href="#features" class="nav-link">შესაძლებლობები</a>
+                <a href="#solutions" class="nav-link">გადაწყვეტილებები</a>
+                <a href="#technology" class="nav-link">ტექნოლოგიები</a>
+                <a href="#ai" class="nav-link">AI ანალიზი</a>
+                <a href="#contact" class="nav-link">კონტაქტი</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn btn-primary" id="demoRequest">
+                    <i class="fas fa-play-circle"></i> დემო
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#home" class="mobile-nav-link active">მთავარი</a>
+            <a href="#features" class="mobile-nav-link">შესაძლებლობები</a>
+            <a href="#solutions" class="mobile-nav-link">გადაწყვეტილებები</a>
+            <a href="#technology" class="mobile-nav-link">ტექნოლოგიები</a>
+            <a href="#ai" class="mobile-nav-link">AI ანალიზი</a>
+            <a href="#contact" class="mobile-nav-link">კონტაქტი</a>
+        </div>
+    </div>
+
+    <section class="hero section" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content" data-aos="fade-right">
+                    <h1>გეოდეზიის <br> მომავალი <span class="text-gradient">დღეს</span></h1>
+                    <p class="hero-subtitle">
+                        AI-ძალით გამაგრებული გეოდეზიური პლატფორმა რეალური დროის 3D მონიტორინგით, 
+                        პროგნოზირებადი ანალიტიკით და სრული ავტომატიზაციით.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-lg" id="startDemo">
+                            <i class="fas fa-rocket"></i> დაიწყეთ დემო
+                        </button>
+                        <a href="#contact" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-calendar-alt"></i> დაჯავშნა
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="99.8">0</div>
+                            <p>სიზუსტის დონე</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="24">0</div>
+                            <p>საათი/დღეში</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="150">0</div>
+                            <p>პროექტი</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visualization" data-aos="fade-left">
+                    <div id="hero-3d"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features section" id="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">რატომ GeoSphere?</span>
+                <h2>რევოლუციური <span class="text-gradient">ტექნოლოგიები</span></h2>
+                <p>გეოდეზიური ინდუსტრიისთვის შექმნილი ყველაზე მოწინავე პლატფორმა</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI გეოდეზია</h3>
+                    <p>ნეირონული ქსელები გეოსივრცული მონაცემთა დასამუშავებლად, პროგნოზირებადი ანალიზისთვის და ავტომატური ანომალიების ამოსაცნობად.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">PyTorch</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <h3>3D ლიზერული სკანირება</h3>
+                    <p>მაღალი სიზუსტის LiDAR სკანერები რეალური დროის 3D მოდელირებისთვის ზედაპირის სიღრმისეული ანალიზით.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">LiDAR</span>
+                        <span class="tech-tag">Point Cloud</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-drone"></i>
+                    </div>
+                    <h3>ავტონომიური დრონები</h3>
+                    <p>AI-ით კონტროლირებადი დრონული ფლოტი ავტომატური მარშრუტიზაციით და რეალური დროის მონაცემთა გადაცემით.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">UAV</span>
+                        <span class="tech-tag">Autonomous</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>კლაუდ პლატფორმა</h3>
+                    <p>გაფართოებული კლაუდ ინფრასტრუქტურა პეტაბაიტი მონაცემების შესანახად და დასამუშავებლად.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Azure</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>VR/AR ვიზუალიზაცია</h3>
+                    <p>სრულად ჩაძირვადი ვირტუალური და გაფართოებული რეალობის გარემოები პროექტების ვიზუალიზაციისთვის.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">VR</span>
+                        <span class="tech-tag">AR</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>რეალური დროის ანალიზი</h3>
+                    <p>ყოველწამიური მონაცემთა დამუშავება და ანალიზი დეფორმაციებისა და ცვლილებების აღმოსაჩენად.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Real-time</span>
+                        <span class="tech-tag">Streaming</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="ai">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">ხელოვნური ინტელექტი</span>
+                <h2>AI <span class="text-gradient">ანალიტიკის</span> დაფა</h2>
+                <p>პროგნოზირებადი ანალიტიკა და ავტომატური ანომალიების აღმოჩენა</p>
+            </div>
+
+            <div class="ai-dashboard" data-aos="fade-up">
+                <div class="dashboard-header">
+                    <h3>გეოდეზიური მონაცემთა ანალიზი</h3>
+                    <div class="dashboard-controls">
+                        <button class="btn btn-secondary btn-sm" id="refreshAnalysis">
+                            <i class="fas fa-sync-alt"></i> განახლება
+                        </button>
+                    </div>
+                </div>
+                <div class="dashboard-content">
+                    <div class="ai-controls">
+                        <h4>ანალიზის პარამეტრები</h4>
+                        <div class="form-group">
+                            <label class="form-label">დატვირთვის ტიპი</label>
+                            <select class="form-control" id="analysisType">
+                                <option value="deformation">დეფორმაციის ანალიზი</option>
+                                <option value="topography">ტოპოგრაფიული ცვლილებები</option>
+                                <option value="structural">სტრუქტურული სტაბილურობა</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">დროის ინტერვალი</label>
+                            <input type="range" class="form-control" id="timeRange" min="1" max="30" value="7">
+                            <div class="flex-between mt-sm">
+                                <span>1 დღე</span>
+                                <span id="rangeValue">7 დღე</span>
+                                <span>30 დღე</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" id="runAnalysis">
+                            <i class="fas fa-play"></i> ანალიზის დაწყება
+                        </button>
+                    </div>
+                    <div class="ai-visualization">
+                        <canvas id="ai-chart"></canvas>
+                        <div class="ai-results" id="aiResults" style="display: none;">
+                            <h4>ანალიზის შედეგები</h4>
+                            <p>AI მოდელმა აღმოაჩინა <span class="text-gradient">3 კრიტიკული ზონა</span> რომლებიც საჭიროებენ ყურადღებას.</p>
+                            <div class="results-grid" id="resultsGrid">
+                                <!-- Results will be generated by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section section" id="solutions">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">ინტერაქტიული რუკები</span>
+                <h2>3D <span class="text-gradient">გეოსივრცითი</span> პლატფორმა</h2>
+                <p>თბილისის რეგიონის რეალური დროის 3D მოდელირება და ანალიზი</p>
+            </div>
+
+            <div class="map-container" data-aos="fade-up">
+                <div id="interactive-map"></div>
+                <div class="map-controls">
+                    <button class="btn btn-secondary" id="zoomIn">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button class="btn btn-secondary" id="zoomOut">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button class="btn btn-secondary" id="resetView">
+                        <i class="fas fa-crosshairs"></i>
+                    </button>
+                    <button class="btn btn-primary" id="addLayer">
+                        <i class="fas fa-layer-group"></i> ფენები
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-3 mt-lg">
+                <div class="card" data-aos="fade-up">
+                    <h4>სამშენებლო მონიტორინგი</h4>
+                    <p>რეალური დროის მონიტორინგი მშენებარე ობიექტებისთვის დეფორმაციებისა და გადახრების აღმოსაჩენად.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <h4>ინფრასტრუქტურის ანალიზი</h4>
+                    <p>გზების, ხიდებისა და კომუნიკაციების მდგომარეობის მონიტორინგი და პროგნოზირება.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h4>გარემოსდაცვითი კვლევა</h4>
+                    <p>ეროზიის, მიწისქვეშა წყლების და გეოლოგიური პროცესების მონიტორინგი.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="technology">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">ტექნოლოგიური სტეკი</span>
+                <h2>გამოყენებული <span class="text-gradient">ტექნოლოგიები</span></h2>
+                <p>ჩვენი პლატფორმა აგებულია მსოფლიოს ლიდერი ტექნოლოგიების ბაზაზე</p>
+            </div>
+
+            <div class="tech-stack">
+                <div class="tech-item" data-aos="fade-up">
+                    <i class="fab fa-python tech-icon"></i>
+                    <span>Python 3.11</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="50">
+                    <i class="fab fa-js tech-icon"></i>
+                    <span>JavaScript ES2023</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fab fa-node-js tech-icon"></i>
+                    <span>Node.js 18</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="150">
+                    <i class="fas fa-database tech-icon"></i>
+                    <span>PostgreSQL 15 + PostGIS</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fab fa-react tech-icon"></i>
+                    <span>React 18</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="250">
+                    <i class="fas fa-cube tech-icon"></i>
+                    <span>Three.js</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-brain tech-icon"></i>
+                    <span>TensorFlow.js</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="350">
+                    <i class="fab fa-docker tech-icon"></i>
+                    <span>Docker & Kubernetes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container container-wide">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">რას ამბობენ კლიენტები</span>
+                <h2>კლიენტთა <span class="text-gradient">გამოცდილებები</span></h2>
+            </div>
+
+            <div class="testimonials-carousel" data-aos="fade-up">
+                <div class="testimonial-card">
+                    <p class="testimonial-content">
+                        "GeoSphere-ის AI პლატფორმამ შეცვალა ჩვენი სამშენებლო პროექტების მართვა. 
+                        რეალური დროის მონიტორინგმა 70%-ით შეამცირა რისკები და გაზარდა ეფექტურობა."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">გ.მ.</div>
+                        <div>
+                            <h5>გიორგი მამულაშვილი</h5>
+                            <p>სამშენებლო კომპანია "თბილისი სიტი"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-content">
+                        "როგორც მთავარ გეოდეზისტს, ჩემთვის მნიშვნელოვანია სიზუსტე და საიმედოობა. 
+                        GeoSphere-ის 3D სკანირების სისტემა უზრუნველყოფს მილიმეტრიან სიზუსტეს."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ნ.წ.</div>
+                        <div>
+                            <h5>ნინო წერეთელი</h5>
+                            <p>მთავარი გეოდეზისტი, "საქქადასტრი"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-content">
+                        "ინფრასტრუქტურის მონიტორინგისთვის ვიყენებთ GeoSphere-ის დრონულ სისტემებს. 
+                        AI ანალიზი საშუალებას გვაძლევს წინასწარ ვიწინასწარმეტყველოთ პოტენციური პრობლემები."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ლ.გ.</div>
+                        <div>
+                            <h5>ლევან გაბუნია</h5>
+                            <p>ინჟინერი, "საქართველოს რკინიგზა"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">დაგვიკავშირდით</span>
+                <h2>მოითხოვეთ <span class="text-gradient">პერსონალური</span> დემო</h2>
+                <p>ჩვენი ექსპერტები დაგეხმარებიან თქვენს პროექტში</p>
+            </div>
+
+            <div class="contact-grid" data-aos="fade-up">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="grid grid-2">
+                            <div class="form-group">
+                                <label class="form-label" for="firstName">სახელი</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="lastName">გვარი</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="company">კომპანია</label>
+                            <input type="text" class="form-control" id="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">ელ. ფოსტა</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">ტელეფონი</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">შეტყობინება</label>
+                            <textarea class="form-control form-textarea" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i> გაგზავნა
+                        </button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="card mb-md">
+                        <h4>საკონტაქტო ინფორმაცია</h4>
+                        <div class="contact-info">
+                            <div class="flex gap-sm mb-md">
+                                <i class="fas fa-map-marker-alt text-gradient"></i>
+                                <div>
+                                    <p>თბილისი, ვაჟა-ფშაველას გამზირი 12</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-sm mb-md">
+                                <i class="fas fa-phone text-gradient"></i>
+                                <div>
+                                    <p>+995 32 2 12 34 56</p>
+                                    <p>+995 555 12 34 56</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-sm">
+                                <i class="fas fa-envelope text-gradient"></i>
+                                <div>
+                                    <p>info@geosphere.ge</p>
+                                    <p>support@geosphere.ge</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h4>სამუშაო საათები</h4>
+                        <div class="working-hours">
+                            <div class="flex-between mb-sm">
+                                <span>ორშაბათი - პარასკევი</span>
+                                <span class="text-gradient">9:00 - 18:00</span>
+                            </div>
+                            <div class="flex-between mb-sm">
+                                <span>შაბათი</span>
+                                <span class="text-gradient">10:00 - 16:00</span>
+                            </div>
+                            <div class="flex-between">
+                                <span>კვირა</span>
+                                <span class="text-gradient">დასვენების დღე</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo text-gradient">GeoSphere</div>
+                    <p class="footer-description">
+                        გეოდეზიური ტექნოლოგიების რევოლუცია. AI, 3D სკანირება და რეალური დროის ანალიზი 
+                        ერთ პლატფორმაზე.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">პროდუქტი</h4>
+                    <div class="footer-links">
+                        <a href="#features" class="footer-link">ფუნქციები</a>
+                        <a href="#solutions" class="footer-link">გადაწყვეტილებები</a>
+                        <a href="#technology" class="footer-link">ტექნოლოგიები</a>
+                        <a href="#ai" class="footer-link">AI ანალიზი</a>
+                        <a href="#" class="footer-link">ფასები</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">კომპანია</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">ჩვენ შესახებ</a>
+                        <a href="#" class="footer-link">კარიერა</a>
+                        <a href="#" class="footer-link">ბლოგი</a>
+                        <a href="#" class="footer-link">პარტნიორები</a>
+                        <a href="#" class="footer-link">კონტაქტი</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">ლეგალური</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">კონფიდენციალურობა</a>
+                        <a href="#" class="footer-link">წესები და პირობები</a>
+                        <a href="#" class="footer-link">Cookie პოლიტიკა</a>
+                        <a href="#" class="footer-link">GDPR</a>
+                        <a href="#" class="footer-link">ლიცენზიები</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 GeoSphere Technologies. ყველა უფლება დაცულია.</p>
+                <p>შექმნილია <span class="text-gradient">საქართველოში</span> მსოფლიოსთვის.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ინიციალიზაცია
+        document.addEventListener('DOMContentLoaded', function() {
+            // აინიციალიზირებს AOS ანიმაციებს
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // თემის გადართვა
+            const themeToggle = document.getElementById('themeToggle');
+            const body = document.body;
+            
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('light-theme');
+                const icon = themeToggle.querySelector('i');
+                if (body.classList.contains('light-theme')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+
+            // მობილური მენიუ
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // დაახლოება ბმულები
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // ჰედერის სკროლის ეფექტი
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // ანიმაციური სტატისტიკა
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        const target = parseInt(element.getAttribute('data-count'));
+                        const suffix = element.textContent.includes('%') ? '%' : '';
+                        const duration = 2000;
+                        const start = 0;
+                        const increment = target / (duration / 16);
+                        
+                        let current = start;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            element.textContent = suffix === '%' ? 
+                                current.toFixed(1) + suffix : 
+                                Math.floor(current) + suffix;
+                        }, 16);
+                        
+                        observer.unobserve(element);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statNumbers.forEach(stat => observer.observe(stat));
+
+            // 3D ვიზუალიზაციის ინიციალიზაცია
+            init3DVisualization();
+
+            // რუკის ინიციალიზაცია
+            initMap();
+
+            // AI დიაგრამის ინიციალიზაცია
+            initAIChart();
+
+            // ტესტიმონიალების კარუსელი
+            initTestimonialsCarousel();
+
+            // კონტაქტის ფორმა
+            initContactForm();
+
+            // ნავიგაციის აქტივობა
+            initNavigation();
+
+            // დემო ღილაკები
+            initDemoButtons();
+
+            // AI ანალიზის კონტროლები
+            initAIControls();
+        });
+
+        // 3D ვიზუალიზაცია
+        function init3DVisualization() {
+            const container = document.getElementById('hero-3d');
+            if (!container) return;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            container.appendChild(renderer.domElement);
+
+            // განათება
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            scene.add(ambientLight);
+            
+            const directionalLight = new THREE.DirectionalLight(0x00C9B7, 1);
+            directionalLight.position.set(5, 5, 5);
+            scene.add(directionalLight);
+
+            // გეომეტრია - დედამიწა
+            const earthGeometry = new THREE.SphereGeometry(2, 32, 32);
+            const earthMaterial = new THREE.MeshPhongMaterial({
+                color: 0x00C9B7,
+                shininess: 100,
+                transparent: true,
+                opacity: 0.8
+            });
+            const earth = new THREE.Mesh(earthGeometry, earthMaterial);
+            scene.add(earth);
+
+            // ქსელი
+            const wireframeGeometry = new THREE.SphereGeometry(2.05, 32, 32);
+            const wireframeMaterial = new THREE.MeshBasicMaterial({
+                color: 0x6C63FF,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.3
+            });
+            const wireframe = new THREE.Mesh(wireframeGeometry, wireframeMaterial);
+            scene.add(wireframe);
+
+            // სანახევრო წრეები
+            const rings = [];
+            const ringColors = [0x00C9B7, 0x6C63FF, 0xFF6B8B];
+            
+            for (let i = 0; i < 3; i++) {
+                const ringGeometry = new THREE.RingGeometry(2.5 + i * 0.5, 2.8 + i * 0.5, 32);
+                const ringMaterial = new THREE.MeshBasicMaterial({
+                    color: ringColors[i],
+                    side: THREE.DoubleSide,
+                    transparent: true,
+                    opacity: 0.2
+                });
+                const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+                ring.rotation.x = Math.PI / 2;
+                ring.rotation.z = i * 0.5;
+                scene.add(ring);
+                rings.push(ring);
+            }
+
+            // ქულები
+            const points = [];
+            for (let i = 0; i < 50; i++) {
+                const pointGeometry = new THREE.SphereGeometry(0.03, 8, 8);
+                const pointMaterial = new THREE.MeshBasicMaterial({ color: 0x00E7D4 });
+                const point = new THREE.Mesh(pointGeometry, pointMaterial);
+                
+                // შემთხვევითი პოზიცია რინგების გარშემო
+                const radius = 2.5 + Math.random() * 2;
+                const angle = Math.random() * Math.PI * 2;
+                point.position.x = Math.cos(angle) * radius;
+                point.position.z = Math.sin(angle) * radius;
+                point.position.y = (Math.random() - 0.5) * 1;
+                
+                scene.add(point);
+                points.push({ mesh: point, radius, angle, speed: 0.5 + Math.random() * 1 });
+            }
+
+            camera.position.z = 8;
+
+            // კონტროლები
+            const controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableZoom = true;
+            controls.enablePan = false;
+            controls.autoRotate = true;
+            controls.autoRotateSpeed = 0.5;
+
+            // ანიმაცია
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                // დედამიწის ბრუნვა
+                earth.rotation.y += 0.002;
+                wireframe.rotation.y += 0.003;
+                
+                // რგოლების ანიმაცია
+                rings.forEach((ring, i) => {
+                    ring.rotation.z += 0.001 * (i + 1);
+                });
+                
+                // ქულების ანიმაცია
+                points.forEach(point => {
+                    point.angle += 0.01 * point.speed;
+                    point.mesh.position.x = Math.cos(point.angle) * point.radius;
+                    point.mesh.position.z = Math.sin(point.angle) * point.radius;
+                    point.mesh.position.y = Math.sin(Date.now() * 0.001 + point.angle) * 0.5;
+                });
+                
+                controls.update();
+                renderer.render(scene, camera);
+            }
+
+            animate();
+
+            // რესპონსივობა
+            window.addEventListener('resize', () => {
+                camera.aspect = container.clientWidth / container.clientHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(container.clientWidth, container.clientHeight);
+            });
+        }
+
+        // რუკის ინიციალიზაცია
+        function initMap() {
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZ2Vvc3BoZXJlIiwiYSI6ImNsb2h0cGpycDAwN3Yya3Fva2cyb2F1aHAifQ.abcdefghijklmnopqrstuvwxyz'; // Replace with your actual token
+            
+            const map = new mapboxgl.Map({
+                container: 'interactive-map',
+                style: 'mapbox://styles/mapbox/dark-v11',
+                center: [44.8, 41.7], // თბილისის კოორდინატები
+                zoom: 11,
+                pitch: 60,
+                bearing: -20
+            });
+
+            map.addControl(new mapboxgl.NavigationControl());
+
+            // 3D ტერეინი
+            map.on('load', () => {
+                map.addSource('mapbox-dem', {
+                    'type': 'raster-dem',
+                    'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+                    'tileSize': 512,
+                    'maxzoom': 14
+                });
+                
+                map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
+
+                // ფენები
+                map.addLayer({
+                    'id': 'buildings',
+                    'source': 'composite',
+                    'source-layer': 'building',
+                    'type': 'fill-extrusion',
+                    'minzoom': 15,
+                    'paint': {
+                        'fill-extrusion-color': '#00C9B7',
+                        'fill-extrusion-height': ['get', 'height'],
+                        'fill-extrusion-base': ['get', 'min_height'],
+                        'fill-extrusion-opacity': 0.6
+                    }
+                });
+
+                // მარკერები
+                const markers = [
+                    { lng: 44.8, lat: 41.7, title: 'თბილისის ცენტრი', color: '#00C9B7' },
+                    { lng: 44.75, lat: 41.73, title: 'მთაწმინდა', color: '#6C63FF' },
+                    { lng: 44.85, lat: 41.68, title: 'ვაკე', color: '#FF6B8B' }
+                ];
+
+                markers.forEach(marker => {
+                    const el = document.createElement('div');
+                    el.className = 'map-marker';
+                    el.style.width = '20px';
+                    el.style.height = '20px';
+                    el.style.backgroundColor = marker.color;
+                    el.style.borderRadius = '50%';
+                    el.style.boxShadow = '0 0 10px ' + marker.color;
+
+                    new mapboxgl.Marker(el)
+                        .setLngLat([marker.lng, marker.lat])
+                        .setPopup(new mapboxgl.Popup().setText(marker.title))
+                        .addTo(map);
+                });
+            });
+
+            // რუკის კონტროლები
+            document.getElementById('zoomIn').addEventListener('click', () => map.zoomIn());
+            document.getElementById('zoomOut').addEventListener('click', () => map.zoomOut());
+            document.getElementById('resetView').addEventListener('click', () => {
+                map.flyTo({
+                    center: [44.8, 41.7],
+                    zoom: 11,
+                    pitch: 60,
+                    bearing: -20,
+                    duration: 2000
+                });
+            });
+
+            document.getElementById('addLayer').addEventListener('click', () => {
+                alert('ფენების მენიუ გაიხსნება აქ');
+            });
+        }
+
+        // AI დიაგრამის ინიციალიზაცია
+        function initAIChart() {
+            const ctx = document.getElementById('ai-chart').getContext('2d');
+            
+            // მონაცემები
+            const labels = Array.from({ length: 30 }, (_, i) => `დღე ${i + 1}`);
+            const deformationData = Array.from({ length: 30 }, () => Math.random() * 10 - 5);
+            const topographyData = Array.from({ length: 30 }, () => Math.random() * 8 - 4);
+            const structuralData = Array.from({ length: 30 }, () => Math.random() * 12 - 6);
+
+            const chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'დეფორმაცია (მმ)',
+                            data: deformationData,
+                            borderColor: '#00C9B7',
+                            backgroundColor: 'rgba(0, 201, 183, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: 'ტოპოგრაფია (მ)',
+                            data: topographyData,
+                            borderColor: '#6C63FF',
+                            backgroundColor: 'rgba(108, 99, 255, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: 'სტრუქტურული (კგ/სმ²)',
+                            data: structuralData,
+                            borderColor: '#FF6B8B',
+                            backgroundColor: 'rgba(255, 107, 139, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: getComputedStyle(document.body).getPropertyValue('--text-secondary')
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: getComputedStyle(document.body).getPropertyValue('--text-secondary')
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: getComputedStyle(document.body).getPropertyValue('--text-secondary')
+                            }
+                        }
+                    }
+                }
+            });
+
+            // დიაგრამის განახლება
+            window.aiChart = chart;
+        }
+
+        // ტესტიმონიალების კარუსელი
+        function initTestimonialsCarousel() {
+            const carousel = document.querySelector('.testimonials-carousel');
+            if (carousel) {
+                new Flickity(carousel, {
+                    cellAlign: 'center',
+                    contain: true,
+                    wrapAround: true,
+                    autoPlay: 5000,
+                    prevNextButtons: false,
+                    pageDots: true,
+                    draggable: true,
+                    adaptiveHeight: true
+                });
+            }
+        }
+
+        // კონტაქტის ფორმა
+        function initContactForm() {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // მარტივი ვალიდაცია
+                    const firstName = document.getElementById('firstName').value;
+                    const email = document.getElementById('email').value;
+                    
+                    if (!firstName || !email) {
+                        alert('გთხოვთ შეავსოთ საჭირო ველები');
+                        return;
+                    }
+                    
+                    // სიმულაცია წარმატებული გაგზავნის
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> გაგზავნა...';
+                    submitBtn.disabled = true;
+                    
+                    setTimeout(() => {
+                        alert('გმადლობთ! თქვენი შეტყობინება მიღებულია. ჩვენი თანამშრომელი დაგიკავშირდებათ 24 საათის განმავლობაში.');
+                        form.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 1500);
+                });
+            }
+        }
+
+        // ნავიგაცია
+        function initNavigation() {
+            // აქტიური ბმულები
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            
+            function setActiveLink() {
+                const scrollPosition = window.scrollY + 100;
+                
+                document.querySelectorAll('section').forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + sectionId) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', setActiveLink);
+            setActiveLink();
+            
+            // გლუვი სკროლი
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // დემო ღილაკები
+        function initDemoButtons() {
+            const demoButtons = ['startDemo', 'demoRequest'];
+            
+            demoButtons.forEach(btnId => {
+                const btn = document.getElementById(btnId);
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        alert('დემო რეჟიმი იწყება... ჩვენი AI პლატფორმა ამუშავდება თქვენი ბრაუზერის გარემოში.');
+                        // აქ დაემატება რეალური დემოს ლოგიკა
+                    });
+                }
+            });
+        }
+
+        // AI კონტროლები
+        function initAIControls() {
+            const timeRange = document.getElementById('timeRange');
+            const rangeValue = document.getElementById('rangeValue');
+            const runAnalysisBtn = document.getElementById('runAnalysis');
+            const refreshBtn = document.getElementById('refreshAnalysis');
+            const analysisType = document.getElementById('analysisType');
+            const aiResults = document.getElementById('aiResults');
+            const resultsGrid = document.getElementById('resultsGrid');
+            
+            if (timeRange && rangeValue) {
+                timeRange.addEventListener('input', function() {
+                    rangeValue.textContent = this.value + ' დღე';
+                });
+            }
+            
+            if (runAnalysisBtn) {
+                runAnalysisBtn.addEventListener('click', function() {
+                    const btn = this;
+                    const originalText = btn.innerHTML;
+                    
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ანალიზი...';
+                    btn.disabled = true;
+                    
+                    // სიმულაცია AI ანალიზის
+                    setTimeout(() => {
+                        // განახლება დიაგრამა
+                        if (window.aiChart) {
+                            const newData = Array.from({ length: 30 }, () => Math.random() * 15 - 7.5);
+                            window.aiChart.data.datasets[0].data = newData;
+                            window.aiChart.update();
+                        }
+                        
+                        // შედეგების გენერაცია
+                        const criticalZones = [
+                            { name: 'ზონა A', risk: 'მაღალი', change: '+2.4 მმ', location: '41.723, 44.788' },
+                            { name: 'ზონა B', risk: 'საშუალო', change: '+1.2 მმ', location: '41.698, 44.812' },
+                            { name: 'ზონა C', risk: 'დაბალი', change: '-0.8 მმ', location: '41.742, 44.765' }
+                        ];
+                        
+                        resultsGrid.innerHTML = '';
+                        criticalZones.forEach(zone => {
+                            const zoneEl = document.createElement('div');
+                            zoneEl.className = 'card';
+                            zoneEl.innerHTML = `
+                                <h5>${zone.name}</h5>
+                                <p><strong>რისკი:</strong> <span class="text-gradient">${zone.risk}</span></p>
+                                <p><strong>ცვლილება:</strong> ${zone.change}</p>
+                                <p><small>${zone.location}</small></p>
+                            `;
+                            resultsGrid.appendChild(zoneEl);
+                        });
+                        
+                        aiResults.style.display = 'block';
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                        
+                        // სქროლი შედეგებისკენ
+                        aiResults.scrollIntoView({ behavior: 'smooth' });
+                    }, 2000);
+                });
+            }
+            
+            if (refreshBtn) {
+                refreshBtn.addEventListener('click', () => {
+                    if (window.aiChart) {
+                        window.aiChart.data.datasets.forEach(dataset => {
+                            dataset.data = Array.from({ length: 30 }, () => Math.random() * 12 - 6);
+                        });
+                        window.aiChart.update();
+                    }
+                });
+            }
+            
+            if (analysisType) {
+                analysisType.addEventListener('change', function() {
+                    if (window.aiChart) {
+                        const type = this.value;
+                        let newData;
+                        
+                        switch(type) {
+                            case 'deformation':
+                                newData = Array.from({ length: 30 }, () => Math.random() * 10 - 5);
+                                break;
+                            case 'topography':
+                                newData = Array.from({ length: 30 }, () => Math.random() * 8 - 4);
+                                break;
+                            case 'structural':
+                                newData = Array.from({ length: 30 }, () => Math.random() * 12 - 6);
+                                break;
+                            default:
+                                newData = Array.from({ length: 30 }, () => Math.random() * 10 - 5);
+                        }
+                        
+                        window.aiChart.data.datasets[0].data = newData;
+                        window.aiChart.update();
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
